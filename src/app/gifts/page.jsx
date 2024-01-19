@@ -1,10 +1,15 @@
 import PostCard from "@/components/postCard/postCard";
 import styles from "./gifts.module.css";
 import { getPosts } from "@/lib/data";
+import { PUT } from "../api/gifts/route";
 
 // // FETCH DATA WITH AN API
 const getData = async () => {
-  const res = await fetch("https://mkn3d.vercel.app/api/gifts", {next:{revalidate:0}});
+  const res = await fetch("https://mkn3d.vercel.app/api/gifts", {
+    cache: "no-store",
+    method: "PUT", // change GET to PUT
+    next: { revalidate: 0 },
+  });
 
   if (!res.ok) {
     throw new Error("Something went wrong");
