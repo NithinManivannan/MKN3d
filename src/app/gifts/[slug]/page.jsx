@@ -6,7 +6,7 @@ import { getPost } from "@/lib/data";
 
 // FETCH DATA WITH AN API
 const getData = async (slug) => {
-  const res = await fetch(`http://localhost:3000/api/gifts/${slug}`);
+  const res = await fetch(`http://mkn3d.vercel.app/api/gifts/${slug}`);
 
   if (!res.ok) {
     throw new Error("Something went wrong");
