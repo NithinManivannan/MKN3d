@@ -23,7 +23,7 @@ const RegisterForm = () => {
       <input type="password" placeholder="password" name="password" />
       <input
         type="password"
-        placeholder="password again"
+        placeholder="Re-enter your password"
         name="passwordRepeat"
       />
       <button>Register</button>
