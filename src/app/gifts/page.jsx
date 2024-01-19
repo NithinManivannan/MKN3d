@@ -4,7 +4,7 @@ import { getPosts } from "@/lib/data";
 
 // // FETCH DATA WITH AN API
 const getData = async () => {
-  const res = await fetch("http://mkn3d.vercel.app/api/gifts", {cache:"no-store"});
+  const res = await fetch("https://mkn3d.vercel.app/api/gifts", {cache:"no-store"});
 
   if (!res.ok) {
     throw new Error("Something went wrong");
