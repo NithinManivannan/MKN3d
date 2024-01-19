@@ -9,7 +9,7 @@ const AdminPostForm = ({userId}) => {
   const [state, formAction] = useFormState(addPost, undefined);
   const [base64Image, setBase64Image] = useState("");
   
-  const handleImageChange = async (e) => {
+const handleImageChange = async (e) => {
     const file = e.target.files[0];
     const base64 = await convertToBase64(file);
     setBase64Image(base64);
@@ -32,7 +32,6 @@ const AdminPostForm = ({userId}) => {
         name="img"
         value={base64Image}
       />
-      {/* <input type="text" name="img" placeholder="img" /> */}
       <textarea type="text" name="desc" placeholder="description" rows={10} />
       <button>Add</button>
       {state?.error}
