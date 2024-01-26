@@ -3,7 +3,7 @@ import Razorpay from "razorpay";
 import shortid from "shortid";
 import crypto from "crypto";
 import { Payment } from "@/lib/models"
-import { connectToDb } from "./utils";
+import { connectToDb } from "@/lib/utils";
 
 const instance = new Razorpay({
     key_id: process.env.RAZORPAY_KEY,
