@@ -1,7 +1,7 @@
-const ContactPage = () => {
+const ForgotPasswordPage = () => {
   return (
-    <div>ContactPage</div>
+    <div>ForgotPasswordPage</div>
   )
 }
 
-export default ContactPage
+export default ForgotPasswordPage

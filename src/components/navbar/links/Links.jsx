@@ -5,7 +5,9 @@ import Image from "next/image";
 import styles from "./links.module.css"
 import NavLink from './navLink/navLink';
 import { handleLogout } from "@/lib/action";
-import { auth } from "@/lib/auth";
+import { useShoppingCart } from 'use-shopping-cart'; // Import the hook
+import { FaShoppingCart } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
 
 const links = [
     {
@@ -28,11 +30,13 @@ const links = [
 
 const Links = ({session}) => {
 
+    const router = useRouter();
+
+
     const[open, setOpen] = useState(false)
 
-    //TEMP
-    
-    const isAdmin = true
+    // Use the useShoppingCart hook to get the cart count
+    const { cartCount } = useShoppingCart();
 
     return (
     <div className={styles.container}>        
@@ -51,6 +55,12 @@ const Links = ({session}) => {
                 <NavLink item = {{title: "Login", path: "/login"}}/>
             ) 
         }
+            <div className={styles.cartIcon}  onClick={() => router.push('/cart')}>
+            <FaShoppingCart size={30} />
+                {cartCount > 0 && (
+                    <span className={styles.cartCount}>{cartCount}</span>
+                )}
+            </div>
         </div>
         <Image
         className={styles.menuButton}

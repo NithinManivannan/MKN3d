@@ -1,0 +1,85 @@
+.cartContainer {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: var(--background-color);
+  border-radius: 8px;
+  color: var(--text-color); /* This ensures text color is visible in both light and dark modes */
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cartList {
+  list-style: none;
+  padding: 0;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: var(--cart-item-bg-color);
+  border-radius: 4px;
+}
+
+.productImage {
+  margin-right: 20px;
+}
+
+.productDetails {
+  flex: 1;
+}
+
+.productTitle {
+  margin: 0;
+  color: var(--text-color); /* This ensures text color is visible */
+}
+
+.productPrice {
+  margin: 5px 0;
+  color: var(--price-color); /* Using the variable for price color */
+}
+
+.quantitySelector {
+  display: flex;
+  align-items: center;
+}
+
+.quantitySelector label {
+  margin-right: 10px;
+  color: var(--text-color); /* This ensures text color is visible */
+}
+
+.removeButton {
+  padding: 5px 10px;
+  background: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cartSummary {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.checkoutButton {
+  padding: 10px 20px;
+  background: var(--checkout-button-bg-color);
+  color: var(--checkout-button-text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.emptyCart {
+  text-align: center;
+  color: var(--text-color); /* This ensures text color is visible */
+}
+
+/* Add any additional styling you need for the page here */

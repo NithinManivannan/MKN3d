@@ -3,6 +3,8 @@ import Links from './links/Links';
 import Image from "next/image";
 import styles from './navbar.module.css'
 import { auth } from "@/lib/auth";
+import ThemeSwitcher from '@/lib/themeSwitcher';
+
 const Navbar = async () => {
 
   const session = await auth()
@@ -24,6 +26,8 @@ const Navbar = async () => {
         <div>
             <Links session = {session}/>
         </div>
+        <ThemeSwitcher />
+        
       </div>
     )
   }

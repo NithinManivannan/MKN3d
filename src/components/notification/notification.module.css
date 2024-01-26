@@ -1,0 +1,19 @@
+/* Notification.module.css */
+
+.notification {
+  position: fixed; /* Position it on top of other content */
+  top: -50px; /* Start off-screen */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center align */
+  background-color: green; /* Background color */
+  color: white; /* Text color */
+  padding: 0.5em 1em; /* Some padding around the text */
+  border-radius: 4px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* A subtle shadow */
+  z-index: 1000; /* Make sure it's on top */
+  transition: top 0.5s ease-in-out; /* Animate the top property */
+}
+
+.notificationVisible {
+  top: 20px; /* Bring into view and adjust this value as needed */
+}

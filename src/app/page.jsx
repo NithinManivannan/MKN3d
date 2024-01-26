@@ -16,6 +16,7 @@ const Home = () => {
         <div className={styles.buttons}>
           <button className={styles.button} onClick={() => router.push('/about')}>Learn More</button>
           <button className={styles.button} onClick={() => router.push('/contact')}>Contact</button>
+
         </div>
       </div>
       <div className={styles.imgContainer}>

@@ -4,11 +4,6 @@
     align-items: center;
     justify-content: space-between;
 }
-
-.logo{
-    font-size: 30px;
-    font-weight: bold;
-}
 .logoButton{
     display: block;
     cursor: pointer;
